@@ -2,17 +2,21 @@
 echo "\033[32m[pre-push] Start prepush check\033[0m"
 
 # Check for eslint
-which eslint &> /dev/null
+echo "\033[34m[pre-push] Check for yarn...\033[0m"
+which yarn &> /dev/null
 if [[ "$?" == 1 ]]; then
-    echo "\033[31mPlease install ESlint\033[0m"
+    echo "\033[31m\xE2\x9C\x96 Please install Yarn\033[0m"
     exit 1
 fi
+echo "\033[32m\xE2\x9C\x94 Pass for checking Yarn \033[0m"
 
 # Eslint check all files under src/
-eslint src/**
+echo "\033[34m[pre-push] Eslint check all files under src/...\033[0m"
+yarn lint
 if [[ "$?" == 1 ]]; then
-    echo "\033[31mESlint check fail, abort git push\033[0m"
+    echo "\033[31m\xE2\x9C\x96 ESlint check fail, abort git push\033[0m"
     exit 1
 fi
+echo "\033[32m\xE2\x9C\x94 Pass for Eslint check \033[0m"
 
 echo "\033[32m[pre-push] successfully\033[0m"

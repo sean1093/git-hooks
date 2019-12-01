@@ -6,9 +6,12 @@
     "repository": "https://github.com/sean1093/git-hooks.git",
     "author": "Sean Chou",
     "license": "MIT",
+    "scripts": {
+        "lint": "node_modules/.bin/eslint --ext .jsx --ext .js ./src"
+    },
     "husky": {
         "hooks": {
-            "pre-commit": "sh scripts/git-hook-prepush.sh"
+            "pre-push": "sh scripts/git-hook-prepush.sh"
         }
     },
     "devDependencies": {
