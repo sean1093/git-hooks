@@ -1,7 +1,7 @@
 {
     "name": "git-hooks",
     "version": "1.0.0",
-    "description": "A sample project for git hooks by using yarn",
+    "description": "A sample project for git hooks by using husky",
     "main": "index.js",
     "repository": "https://github.com/sean1093/git-hooks.git",
     "author": "Sean Chou",
@@ -16,11 +16,11 @@
     },
     "devDependencies": {
         "eslint": "^6.7.0",
-        "eslint-config-airbnb": "^18.0.1",
-        "eslint-plugin-import": "^2.18.2",
-        "eslint-plugin-jsx-a11y": "^6.2.3",
-        "eslint-plugin-react": "^7.16.0",
-        "eslint-plugin-react-hooks": "^1.7.0",
-        "husky": "^3.1.0"
+        "eslint-config-airbnb": "18.0.1",
+        "eslint-plugin-import": "2.18.2",
+        "eslint-plugin-jsx-a11y": "6.2.3",
+        "eslint-plugin-react": "7.16.0",
+        "eslint-plugin-react-hooks": "1.7.0",
+        "husky": "3.1.0"
     }
 }
